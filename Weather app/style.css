@@ -8,3 +8,29 @@ body {
     background-attachment: fixed;
     font-family: Montserrat, sans-serif;
 }
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.container{
+    width: 40%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    backdrop-filter: blur(3px);
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 10px 10px 40px rgb(233, 152, 101);
+    border-radius: 30px;
+    height: 300px;
+}
+.cloud{
+    font-size: 50px;
+}
+.sun{
+    font-size: 50px;
+}
