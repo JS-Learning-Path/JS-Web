@@ -23,7 +23,6 @@ h2 {
   transform: translate(-50%, -50%);
   backdrop-filter: blur(3px);
   text-align: center;
-  /* border: 1px solid black; */
   box-shadow: 10px 10px 40px rgb(233, 152, 101);
   border-radius: 30px;
   height: 400px;
@@ -64,27 +63,57 @@ h2 {
   width: 80%;
   padding: 10px;
   border: none;
-  background-color: transparent;
+  border-radius: 5px;
+  /* background-color: transparent; */
 }
 #getWeatherBtn {
-    padding: 10px;
-    color: black;
-    border: none;
-    background-color: rgba(233, 152, 101, 0.777);
-    border-radius: 10px;
-    cursor: pointer;
+  padding: 10px 5px;
+  color: black;
+  border: none;
+  font-size: 16px;
+  background-color: rgba(233, 152, 101, 0.777);
+  border-radius: 10px;
+  cursor: pointer;
+}
+#getWeatherBtn:hover {
+  background-color: rgba(233, 152, 101, 1);
+  color: white;
+  box-shadow: 0 0 10px rgba(233, 152, 101, 0.8);
+}
+#cityInput::placeholder {
+  color: lightsalmon;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+#cityInput:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(233, 152, 101, 0.8);
 }
 .weatherResult {
-    position:absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  width: 35%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 60%;
+  left: 50%;
+  gap: 20px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: Montserrat;
+}
+.clock {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  color: white;
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
