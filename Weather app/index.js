@@ -16,6 +16,7 @@ const loading = document.querySelector(".spinner");
 const clock = document.querySelector(".clock");
 const time = document.querySelector("#time");
 const date = document.querySelector("#date");
+const enter = document.querySelector("Enter");
 
 time.innerHTML = new Date().toLocaleString("en-US", {
   hour: "2-digit",
@@ -46,5 +47,14 @@ checkBtn.addEventListener("click", () => {
             <p>Humidity: ${data.humidity}%</p>
             `;
     }, 1000);
+  }
+  if (!weatherData[selectedCity]) {
+    weatherResult.innerHTML = `<p>No data available for ${selectedCity}.</p>`;
+  }
+});
+
+citySelect.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    checkBtn.click();
   }
 });
