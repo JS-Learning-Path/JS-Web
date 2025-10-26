@@ -18,19 +18,23 @@ const time = document.querySelector("#time");
 const date = document.querySelector("#date");
 const enter = document.querySelector("Enter");
 
-time.innerHTML = new Date().toLocaleString("en-US", {
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-  hour12: false,
-});
+function updateClock() {
+  time.innerHTML = new Date().toLocaleString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
 
-date.innerHTML = new Date().toLocaleDateString("en-US", {
-  year: "numeric",
-  month: "long",
-  day: "2-digit",
-  weekday: "long",
-});
+  date.innerHTML = new Date().toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "2-digit",
+    weekday: "long",
+  });
+  setInterval(updateClock, 1000);
+}
+updateClock();
 
 checkBtn.addEventListener("click", () => {
   const selectedCity = citySelect.value;
@@ -46,6 +50,7 @@ checkBtn.addEventListener("click", () => {
             <p>Wind Speed: ${data.wind} m/s</p>
             <p>Humidity: ${data.humidity}%</p>
             `;
+      weatherResult.style.fontSize = "18px";
     }, 1000);
   }
   if (!weatherData[selectedCity]) {
