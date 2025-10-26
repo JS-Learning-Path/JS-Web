@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #302f2c;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  min-height: 250px;
+  max-width: 100%;
+  position: absolute;
+  background-color: #efede3;
+  /* touch-action: 50%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+}
+h2 {
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  color: #302f2c;
+}
+.greeting-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+#nameInput {
+  padding: 15px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  background-color: #e1d4c2;
+}
+#greetBtn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #302f2c;
+  color: #efede3;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+#greetBtn:hover {
+  background-color: #4a4945;
+}
