@@ -40,6 +40,7 @@ checkBtn.addEventListener("click", () => {
   const selectedCity = citySelect.value;
   if (weatherData[selectedCity]) {
     loading.style.display = "block";
+    loading.style.marginLeft = "5%";
     setTimeout(() => {
       loading.style.display = "none";
       const data = weatherData[selectedCity];
