@@ -1,5 +1,7 @@
 const sunToggle = document.querySelector(".toggle-theme-icon-sun");
 const moonToggle = document.querySelector(".toggle-theme-icon-moon");
+const searchBtn = document.querySelector(".search");
+const searchInput = document.querySelector(".search-bar");
 
 sunToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
