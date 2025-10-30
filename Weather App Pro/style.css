@@ -99,13 +99,14 @@ header .search {
   background-color: #fffffffe;
 }
 .right-side-content {
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
   position: relative;
   background-color: #f1f5f9fe;
   left: 700px;
   padding: 20px;
   margin-top: 20px;
-  width: 70%;
+  border-radius: 10px;
+  width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,7 +120,8 @@ header .search {
   gap: 15px;
 }
 .forecast-day {
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
+  width: 400px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
