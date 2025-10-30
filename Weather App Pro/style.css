@@ -92,6 +92,7 @@ header .search {
   /* outline: 1px solid black; */
   width: 700px;
   left: 400px;
+  height: 600px;
   position: relative;
   margin-top: 20px;
   padding: 20px;
@@ -101,10 +102,10 @@ header .search {
 .right-side-content {
   /* outline: 1px solid black; */
   position: relative;
+  top: -640px;
   background-color: #f1f5f9fe;
-  left: 700px;
+  left: 65%;
   padding: 20px;
-  margin-top: 20px;
   border-radius: 10px;
   width: 30%;
   display: flex;
@@ -132,4 +133,70 @@ header .search {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+.spinner {
+  display: none;
+  position: relative;
+  top: 100px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+.weather-content-days{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  position: relative;
+  top: 300px;
+  padding: 10px;
+}
+.day-1{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.day-2{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.day-3{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.day-4{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.day-5{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.day-6{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.weather-details{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  position: relative;
+  top: 320px;
+  background-color: ;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
