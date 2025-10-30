@@ -8,6 +8,7 @@ const spinner = document.querySelector(".spinner");
 const sideBar = document.querySelector(".sidebar");
 const rightSideContent = document.querySelector(".right-side-content");
 const forecastDay = document.querySelector(".forecast-day");
+const forecastDetails = document.querySelector(".weather-details");
 const cities = [
   {
     name: "Plovdiv",

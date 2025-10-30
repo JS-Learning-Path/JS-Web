@@ -146,51 +146,66 @@ header .search {
   animation: spin 1s linear infinite;
   margin: auto;
 }
-.weather-content-days{
+.weather-content-days {
   display: flex;
   flex-direction: row;
   gap: 30px;
   position: relative;
   top: 300px;
   padding: 10px;
+  /* outline: 1px solid black; */
 }
-.day-1{
+.day-1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.day-2{
+.day-2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.day-3{
+.day-3 {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.day-4{
+.day-4 {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.day-5{
+.day-5 {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.day-6{
+.day-6 {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.weather-details{
+.weather-details {
   display: flex;
   flex-direction: row;
   gap: 50px;
   position: relative;
   top: 320px;
-  background-color: ;
+}
+.weather-detail-item {
+  /* outline: 1px solid black; */
+  padding: 10px 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.weather-summary {
+  position: relative;
+  top: 350px;
+  /* outline: 1px solid black; */
+  padding: 10px;
+  border-radius: 10px;
 }
 @keyframes spin {
   from {
