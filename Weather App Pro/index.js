@@ -7,8 +7,12 @@ const weatherContent = document.querySelector(".weather-container");
 const spinner = document.querySelector(".spinner");
 const sideBar = document.querySelector(".sidebar");
 const rightSideContent = document.querySelector(".right-side-content");
-const forecastDay = document.querySelector(".forecast-day");
-const forecastDetails = document.querySelector(".weather-details");
+const weatherDetails = document.querySelector(".weather-details");
+const weatherInfo = document.querySelector(".weather-info");
+const weatherContentDays = document.querySelector(".weather-content-days");
+const foreCast = document.querySelector(".forecast");
+const foreCastItems = document.querySelector(".forecast-items");
+const foreCastDays = document.querySelectorAll(".forecast-day"); //
 const cities = [
   {
     name: "Plovdiv",
@@ -21,6 +25,8 @@ const cities = [
     country: "Bulgaria",
     temperature: "18",
     condition: "Partly cloudy",
+  },
+  {
     name: "Varna",
     country: "Bulgaria",
     temperature: "24",
@@ -87,14 +93,24 @@ function updateIcons() {
     sideBar.style.color = "white";
     rightSideContent.style.backgroundColor = "#1e293b";
     rightSideContent.style.color = "white";
+    weatherContentDays.style.backgroundColor = "#1e293b";
+    weatherContentDays.style.color = "white";
+    foreCast.style.backgroundColor = "#1e293b";
+    foreCast.style.color = "white";
+    foreCastItems.style.color = "white";
   } else {
     sunToggle.style.display = "block";
     moonToggle.style.display = "none";
+    foreCastDays.forEach((day) => {
+      day.style.borderColor = "#e2e8f0";
+      day.style.borderRadius = "8px";
+      day.style.backgroundColor = "#acb3c02e";
+    });
   }
 }
 updateIcons();
-sunToggle.addEventListener("click", updateIcons);
-moonToggle.addEventListener("click", updateIcons);
+// sunToggle.addEventListener("click", updateIcons);
+// moonToggle.addEventListener("click", updateIcons);
 
 function setTheme(theme) {
   if (theme === "dark") {
