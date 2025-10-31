@@ -56,7 +56,8 @@ searchInput.addEventListener("keypress", (e) => {
     searchBtn.click();
   }
 });
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", async () => {
+  await showSpinner();
   weatherContent.innerHTML = "";
   const query = searchInput.value.trim();
   const citiesFound = cities.filter((city) => {
@@ -72,9 +73,12 @@ searchBtn.addEventListener("click", () => {
       <span class="forecast-items">
       <img src="/Weather App Pro/icons/sun.png" alt="Forecast Icon" />
       </span>
-    `;
+      `;
     weatherContent.appendChild(cityElement);
   });
+  if (citiesFound.length > 0) {
+    searchInput.value = "";
+  }
 });
 
 // sunToggle.addEventListener("click", () => {
@@ -135,3 +139,15 @@ if (savedTheme) {
 } else {
   updateIcons();
 }
+
+async function showSpinner() {
+  await new Promise((resolve) => {
+    spinner.style.display = "block";
+    setTimeout(() => {
+      spinner.style.display = "none";
+      resolve();
+    }, 2000);
+  });
+}
+
+
