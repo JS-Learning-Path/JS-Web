@@ -56,6 +56,7 @@ searchInput.addEventListener("keypress", (e) => {
     searchBtn.click();
   }
 });
+
 searchBtn.addEventListener("click", async () => {
   await showSpinner();
   weatherContent.innerHTML = "";
@@ -78,12 +79,11 @@ searchBtn.addEventListener("click", async () => {
   });
   if (citiesFound.length > 0) {
     searchInput.value = "";
+  } else {
+    weatherContent.innerHTML = `
+      <p class="error-message">City not found. Please try again.</p>`;
   }
 });
-
-// sunToggle.addEventListener("click", () => {
-//   document.body.classList.toggle("dark-theme");
-// });
 
 function updateIcons() {
   if (document.body.classList.contains("dark-theme")) {
@@ -113,8 +113,6 @@ function updateIcons() {
   }
 }
 updateIcons();
-// sunToggle.addEventListener("click", updateIcons);
-// moonToggle.addEventListener("click", updateIcons);
 
 function setTheme(theme) {
   if (theme === "dark") {
@@ -149,5 +147,3 @@ async function showSpinner() {
     }, 2000);
   });
 }
-
-
