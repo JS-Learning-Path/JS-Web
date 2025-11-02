@@ -17,6 +17,7 @@ body.dark-theme {
 .sidebar .dark-theme {
   background-color: #1e1e1e;
 }
+.
 
 header {
   /* outline: 1px solid black; */
@@ -215,4 +216,3 @@ header .search {
     transform: rotate(360deg);
   }
 }
-
