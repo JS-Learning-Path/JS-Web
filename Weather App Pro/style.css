@@ -17,7 +17,6 @@ body.dark-theme {
 .sidebar .dark-theme {
   background-color: #1e1e1e;
 }
-.
 
 header {
   /* outline: 1px solid black; */
@@ -200,6 +199,7 @@ header .search {
   display: flex;
   flex-direction: column;
   justify-content: left;
+  background-color: #b7d9f046;
 }
 .weather-summary {
   position: relative;
@@ -208,11 +208,47 @@ header .search {
   padding: 10px;
   border-radius: 10px;
 }
+.error-message {
+  position: relative;
+  top: 250px;
+  text-align: center;
+  font-size: 20px;
+}
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1629px) {
+  header,
+  .main-content {
+    width: 50vw;
+    left: -200px;
+    margin: auto;
+    /* outline: 1px solid black; */
+  }
+  .right-side-content {
+    left: 0;
+    width: 30vw;
+    top: 0;
+    margin-top: 60px;
+    position: absolute;
+    margin-left: 65%;
+    /* outline: 1px solid black; */
+    flex-wrap: wrap;
+  }
+  .sidebar {
+    height: 70%;
+    margin-top: 20px;
+    /* outline: 1px solid black; */
+  }
+  .forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
