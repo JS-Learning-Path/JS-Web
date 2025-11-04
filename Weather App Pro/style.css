@@ -252,3 +252,36 @@ header .search {
     gap: 20px;
   }
 }
+@media (max-width: 1500px) and (min-width: 1200px) {
+  .sidebar {
+    height: 50%;
+    margin-top: 5%;
+  }
+  header {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-content {
+    position: relative;
+    left: -200px;
+    width: 40%;
+  }
+  .weather-details {
+    display: inline;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .right-side-content {
+    /* display: none; */
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 55%;
+    place-content: ce;
+  }
+  .forecast-day {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
