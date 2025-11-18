@@ -6,8 +6,10 @@ const resultBox = document.querySelector(".result-box");
 if (!inputField || !button || !resultBox) {
   console.error("One or more required elements are missing in the HTML.");
 } else {
-  const reversed = document.createElement("div");
-  const count = document.createElement("div");
+  container.appendChild(resultBox);
+  const reversed = document.createElement("p");
+  reversed.textContent = "Reversed :";
+  const count = document.createElement("p");
   count.textContent = "Character Count: 0";
   resultBox.appendChild(reversed);
   resultBox.appendChild(count);
@@ -16,11 +18,7 @@ if (!inputField || !button || !resultBox) {
     const reversedText = text.split("").reverse().join("");
     reversed.textContent = `Reversed :${reversedText}`;
     count.textContent = `Character Count: ${text.length}`;
+    reversed.style.fontWeight = "bold";
+    count.style.fontWeight = "bold";
   });
-  button.addEventListener("click", () => {
-    inputField.value = "";
-    inputField.focus();
-    inputField.dispatchEvent(new Event("input"));
-  });
-  inputField.dispatchEvent(new Event("input"));
 }
