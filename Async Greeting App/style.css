@@ -18,7 +18,6 @@ body {
   max-width: 100%;
   position: absolute;
   background-color: #efede3;
-  /* touch-action: 50%; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -44,6 +43,7 @@ h2 {
   border: none;
   border-radius: 5px;
   background-color: #e1d4c2;
+  caret-color: #302f2c;
 }
 #greetBtn {
   padding: 10px 30px;
